@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kevin Jinno's Game</title>
+  </head>
+  <body>
+    <p id="myUser">
+
+    </p>
+    <p id="compAnswer">
+      
+    </p>
+    
+    <p id="result">
+      
+    </p>
+
+    <script>
+      var input = prompt("Pick A Number 1 through 5");
+      var random = function (number) {
+       return Math.floor(number * 5) + 1;
+      }
+      var compAnswer= random(Math.random());
+      var userAnswer = parseInt(input)
+      document.getElementById("myUser").innerHTML = "You Chose " + userAnswer;
+      document.getElementById("compAnswer").innerHTML = "The Computer Chose " + compAnswer;
+      if (userAnswer === compAnswer){
+        document.getElementById("result").innerHTML = "Nice Job, You win"
+      }
+      else {
+        document.getElementById("result").innerHTML = "Better luck next time"
+      }
+      
+      compAnswer();
+
+    </script>
+  </body>
+  </html>
